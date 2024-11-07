@@ -17,7 +17,7 @@ export const DATETIME_FORMAT: NgxMatDateFormats = {
 
 export const DIALOG_WIDTH = '640px';
 
-export const TASK_STATUS_LABELS = ['To Do', 'In Progress', 'Completed'];
+export const TASK_STATUS_LABELS = ['Backlog','To Do', 'In Progress', 'Completed'];
 
 export const TASK_PRIORITY_LABELS = ['High', 'Medium', 'Low'];
 
