@@ -131,7 +131,7 @@ export class EditTaskDialogComponent implements OnInit {
           noWhitespaceValidator,
         ],
       }),
-      status: new FormControl(isEdit ? task.status : TaskStatus.ToDo, {
+      status: new FormControl(isEdit ? task.status : TaskStatus.Backlog, {
         nonNullable: true,
       }),
       priority: new FormControl(isEdit ? task.priority : TaskPriority.High, {
@@ -163,7 +163,7 @@ export class EditTaskDialogComponent implements OnInit {
       const task: Task = {
         ...this.data.task,
         ...this.form.value,
-        id: this.data.isEdit ? this.data.task.id : v4(),
+        //id: this.data.isEdit ? this.data.task.id : v4(),
         createdAt: this.data.isEdit
           ? this.data.task.createdAt
           : moment().format(),

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  appName: 'Task Management Board',
+  appName: 'Task Management System',
 };

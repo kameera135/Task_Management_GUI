@@ -35,7 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
   styleUrls: ['./task-board.component.scss'],
   imports: [
     CommonModule,
-    TaskCardComponent,
+    //TaskCardComponent,
     TaskCategoryComponent,
     MatIconModule,
     MatFormFieldModule,
@@ -45,7 +45,7 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatButtonModule,
     MatDialogModule,
-    EditTaskDialogComponent,
+    //EditTaskDialogComponent,
     A11yModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,

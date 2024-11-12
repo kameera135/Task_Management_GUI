@@ -1,0 +1,43 @@
+<!-- <p>login works!</p> -->
+
+<div class="page">
+  <div class="wrapper">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off" novalidate>
+          <div class="logo">
+              <img src="/assets/images/login_page_logo.png" alt="Logo">
+          </div>
+          <div class="input-box">
+              <input type="text" name="email" id="email" formControlName="email" placeholder="email"
+                  autofocus>
+              <i class='bi bi-person'></i>
+          </div>
+          <div class="input-box">
+              <input type="{{ hidePassword ? 'password' : 'text' }}" formControlName="password" name="password"
+                  id="password" placeholder="Password">
+              <i (click)="togglePasswordVisibility()"
+                  class="pw-toggle bi {{ hidePassword ? 'bi-eye-slash' : 'bi-eye' }}"></i>
+          </div>
+
+          <!-- <div class="remember-forget">
+              <label><input type="checkbox" formControlName="remember_login" name="remember_login"
+                      id="remember_login">
+                  Remember email</label>
+              <a [routerLink]="['/auth/forgot-password']">Forget Password?</a>
+          </div> -->
+          <button type="submit" class="btn btn-primary border-0 w-100 btn-load rounded-pill"
+              [disabled]="startLoginInProcess">
+              <span class="d-flex align-items-center">
+                  <span id="btnLoginText" class="flex-grow-1">
+                      {{startLoginInProcess ? 'Signing in...' : 'Sign in'}}
+                  </span>
+                  <span *ngIf="this.startLoginInProcess" role="status" class="spinner-border flex-shrink-0"></span>
+              </span>
+          </button>
+      </form>
+  </div>
+  <!-- <div class="footer">
+      <p>{{moduleName}} - {{version}}</p>
+  </div> -->
+</div>
+
+
