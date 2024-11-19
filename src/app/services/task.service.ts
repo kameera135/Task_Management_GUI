@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class TaskService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
+
+  apiUrl = 'http://127.0.0.1:4000/task';
+
+  //get all tasks
+  getTasks(){
+    const url = `${this.apiUrl}/tasks`;
+
+    return this.httpClient.get(url);
+  }
+
 }
